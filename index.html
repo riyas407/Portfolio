@@ -1,162 +1,612 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Riyas Ahammed - Developer Portfolio</title>
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background: #0a0a0a;
-    color: #e0e0e0;
-    line-height: 1.7;
-}
-/* Navigation Bar */
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(10, 10, 10, 0.95);
-    backdrop-filter: blur(10px);
-    padding: 1.5rem 5%;
-    z-index: 1000;
-    border-bottom: 1px solid #00ff88;
-}
-nav .nav-content {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #00ff88;
-    text-decoration: none;
-}
-.nav-links {
-    display: flex;
-    gap: 2rem;
-}
-.nav-links a {
-    color: #e0e0e0;
-    text-decoration: none;
-    transition: color 0.3s;
-    font-weight: 500;
-}
-.nav-links a:hover {
-    color: #00ff88;
-}
-/* Hero Section */
-.hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5rem 5%;
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
-    position: relative;
-    overflow: hidden;
-}
-.hero::before {
-    content: '';
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(0, 255, 136, 0.1) 0%, transparent 70%);
-    top: -250px;
-    right: -250px;
-    animation: pulse 4s ease-in-out infinite;
-}
-@keyframes pulse {
-    0%, 100% { transform: scale(1); opacity: 0.5; }
-    50% { transform: scale(1.2); opacity: 0.8; }
-}
-.hero-content {
-    max-width: 1400px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-}
-.hero-text h1 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-    color: #fff;
-    line-height: 1.2;
-}
-.hero-text .highlight {
-    color: #00ff88;
-    display: block;
-}
-.hero-text p {
-    font-size: 1.3rem;
-    color: #b0b0b0;
-    margin-bottom: 2rem;
-}
-.cta-buttons {
-    display: flex;
-    gap: 1.5rem;
-}
-.btn {
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s;
-    text-decoration: none;
-    display: inline-block;
-}
-.btn-primary {
-    background: #00ff88;
-    color: #0a0a0a;
-}
-.btn-primary:hover {
-    background: #00cc6f;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
-}
-.btn-secondary {
-    background: transparent;
-    color: #00ff88;
-    border: 2px solid #00ff88;
-}
-.btn-secondary:hover {
-    background: rgba(0, 255, 136, 0.1);
-}
-.hero-stats {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-}
-.stat-card {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 2rem;
-    border-radius: 15px;
-    border: 1px solid rgba(0, 255, 136, 0.2);
-    text-align: center;
-    transition: all 0.3s;
-}
-.stat-card:hover {
-    background: rgba(0, 255, 136, 0.1);
-    transform: translateY(-5px);
-}
-.stat-card h3 {
-    font-size: 3rem;
-    color: #00ff88;
-    margin-bottom: 0.5rem;
-}
-.stat-card p {
-    color: #b0b0b0;
-}
-</style></head><body>
-</body></html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riyas Ahammed - Developer Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.7;
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 5%;
+            z-index: 1000;
+            border-bottom: 1px solid #00ff88;
+        }
+
+        nav .nav-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #00ff88;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #e0e0e0;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #00ff88;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5rem 5%;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 255, 136, 0.1) 0%, transparent 70%);
+            top: -250px;
+            right: -250px;
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.2); opacity: 0.8; }
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            color: #fff;
+            line-height: 1.2;
+        }
+
+        .hero-text .highlight {
+            color: #00ff88;
+            display: block;
+        }
+
+        .hero-text p {
+            font-size: 1.3rem;
+            color: #b0b0b0;
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #00ff88;
+            color: #0a0a0a;
+        }
+
+        .btn-primary:hover {
+            background: #00cc6f;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #00ff88;
+            border: 2px solid #00ff88;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0, 255, 136, 0.1);
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .stat-card:hover {
+            background: rgba(0, 255, 136, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .stat-card h3 {
+            font-size: 3rem;
+            color: #00ff88;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-card p {
+            color: #b0b0b0;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 6rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: #00ff88;
+            margin: 1rem auto;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            color: #b0b0b0;
+        }
+
+        .about-text h3 {
+            color: #00ff88;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .skills-showcase {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .skill-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1rem;
+            border-radius: 10px;
+            border-left: 3px solid #00ff88;
+            transition: all 0.3s;
+        }
+
+        .skill-item:hover {
+            background: rgba(0, 255, 136, 0.1);
+            transform: translateX(10px);
+        }
+
+        .skill-item strong {
+            color: #fff;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            transition: all 0.3s;
+        }
+
+        .project-item:hover {
+            transform: translateY(-10px);
+            border-color: #00ff88;
+            box-shadow: 0 20px 50px rgba(0, 255, 136, 0.2);
+        }
+
+        .project-header {
+            background: linear-gradient(135deg, #00ff88 0%, #00cc6f 100%);
+            padding: 2rem;
+            color: #0a0a0a;
+        }
+
+        .project-header h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-type {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            font-weight: 600;
+        }
+
+        .project-body {
+            padding: 2rem;
+        }
+
+        .project-body p {
+            color: #b0b0b0;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-tag {
+            background: rgba(0, 255, 136, 0.1);
+            color: #00ff88;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            border: 1px solid rgba(0, 255, 136, 0.3);
+        }
+
+        /* Certifications */
+        .cert-timeline {
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .cert-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #00ff88;
+        }
+
+        .cert-item {
+            position: relative;
+            margin-bottom: 3rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            transition: all 0.3s;
+        }
+
+        .cert-item:hover {
+            background: rgba(0, 255, 136, 0.05);
+            transform: translateX(10px);
+        }
+
+        .cert-item::before {
+            content: '';
+            position: absolute;
+            left: -3.5rem;
+            top: 2rem;
+            width: 15px;
+            height: 15px;
+            background: #00ff88;
+            border-radius: 50%;
+            border: 3px solid #0a0a0a;
+        }
+
+        .cert-item h3 {
+            color: #00ff88;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-item p {
+            color: #b0b0b0;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: rgba(0, 255, 136, 0.05);
+            text-align: center;
+            padding: 4rem 5%;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            min-width: 250px;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: #e0e0e0;
+            display: block;
+        }
+
+        .contact-card:hover {
+            background: rgba(0, 255, 136, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .contact-card .icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-card h4 {
+            color: #00ff88;
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background: #0a0a0a;
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            border-top: 1px solid rgba(0, 255, 136, 0.2);
+        }
+
+        @media (max-width: 968px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <a href="#" class="logo">RA</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Hi, I'm <span class="highlight">Riyas Ahammed</span></h1>
+                <p>Full Stack Developer specializing in Cloud Technologies and IoT Solutions</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <h3>8.2</h3>
+                    <p>CGPA</p>
+                </div>
+                <div class="stat-card">
+                    <h3>5+</h3>
+                    <p>Certifications</p>
+                </div>
+                <div class="stat-card">
+                    <h3>2+</h3>
+                    <p>Major Projects</p>
+                </div>
+                <div class="stat-card">
+                    <h3>2025</h3>
+                    <p>Graduating</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Building innovative solutions with modern technologies</h3>
+                <p>I'm a final-year B.Tech Information Technology student at V.S.B College of Engineering Technical Campus, Coimbatore, with a passion for creating efficient and scalable applications.</p>
+                <p>My expertise spans across full-stack development using the MERN stack, cloud technologies with AWS, and IoT solutions. I completed the intensive AWS re/Start Program and have hands-on experience from my internship at FalconX.</p>
+                <p>I thrive on solving complex problems and building applications that make a real-world impact, from employee management systems to IoT-based safety solutions.</p>
+            </div>
+            <div class="skills-showcase">
+                <div class="skill-item">
+                    <strong>Frontend:</strong> React.js, HTML, CSS, JavaScript
+                </div>
+                <div class="skill-item">
+                    <strong>Backend:</strong> Node.js, Express.js
+                </div>
+                <div class="skill-item">
+                    <strong>Database:</strong> MongoDB
+                </div>
+                <div class="skill-item">
+                    <strong>Cloud:</strong> AWS (EC2, S3, IAM, CloudFormation)
+                </div>
+                <div class="skill-item">
+                    <strong>Languages:</strong> Java, JavaScript
+                </div>
+                <div class="skill-item">
+                    <strong>Tools:</strong> Git, Linux, VS Code
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="projects">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-item">
+                <div class="project-header">
+                    <div class="project-type">IoT Solution</div>
+                    <h3>Car Black Box System</h3>
+                </div>
+                <div class="project-body">
+                    <p>Developed an IoT-based vehicle monitoring system using ESP32 microcontroller with integrated temperature, gas, and ultrasonic sensors. The system provides real-time accident detection and analysis with instant GSM alerts, significantly improving road safety and emergency response times.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">ESP32</span>
+                        <span class="tech-tag">IoT</span>
+                        <span class="tech-tag">Sensors</span>
+                        <span class="tech-tag">GSM</span>
+                        <span class="tech-tag">Real-time Data</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-item">
+                <div class="project-header">
+                    <div class="project-type">Full Stack Application</div>
+                    <h3>Employee Management System</h3>
+                </div>
+                <div class="project-body">
+                    <p>Built a comprehensive employee management platform using the MERN stack with secure JWT authentication, password hashing, and role-based access control. The system streamlines employee data management while ensuring security through proper authentication and authorization mechanisms.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Express</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">JWT</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="certifications">
+        <h2 class="section-title">Certifications & Learning</h2>
+        <div class="cert-timeline">
+            <div class="cert-item">
+                <h3>AWS re/Start Program</h3>
+                <p>Completed comprehensive 12-week cloud training program covering EC2, S3, IAM, VPC, and CloudFormation with extensive hands-on labs in Linux, Python, and networking fundamentals.</p>
+            </div>
+            <div class="cert-item">
+                <h3>AWS Educate</h3>
+                <p>Introduction to Cloud 101 and Getting Started with Storage - Issued by AWS Training & Certification via Credly</p>
+            </div>
+            <div class="cert-item">
+                <h3>MongoDB University</h3>
+                <p>Completed MongoDB Fundamentals Track comprising 16.5 hours of comprehensive database training</p>
+            </div>
+            <div class="cert-item">
+                <h3>Java Essentials</h3>
+                <p>Foundational Java training through LinkedIn covering Object-Oriented Programming concepts and practical development techniques</p>
+            </div>
+            <div class="cert-item">
+                <h3>FalconX Internship</h3>
+                <p>Gained practical experience in full-stack web development, working with React, Node.js, databases, Git version control, and implementing web security best practices</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <h2 class="section-title">Let's Connect</h2>
+        <p style="color: #b0b0b0; font-size: 1.2rem; margin-bottom: 2rem;">I'm always open to discussing new projects, opportunities, or collaborations</p>
+        <div class="contact-links">
+            <a href="mailto:riyasahammed407@gmail.com" class="contact-card">
+                <div class="icon">📧</div>
+                <h4>Email</h4>
+                <p>riyasahammed407@gmail.com</p>
+            </a>
+            <a href="tel:9384916116" class="contact-card">
+                <div class="icon">📱</div>
+                <h4>Phone</h4>
+                <p>9384916116</p>
+            </a>
+            <a href="https://github.com/riyas407" target="_blank" class="contact-card">
+                <div class="icon">💻</div>
+                <h4>GitHub</h4>
+                <p>github.com/riyas407</p>
+            </a>
+            <a href="https://www.linkedin.com/in/riyas-ahammed-i-b87455270/" target="_blank" class="contact-card">
+                <div class="icon">💼</div>
+                <h4>LinkedIn</h4>
+                <p>Connect with me</p>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Riyas Ahammed I. Crafted with passion and code.</p>
+    </footer>
+</body>
+</html>
